@@ -1,2 +1,2 @@
-const RestneerXRequestId = require("./dist/restneer-x-request-id");
-module.exports = RestneerXRequestId.middleware;
+const RestifyRequestId = require("./dist/restify-x-request-id");
+module.exports = RestifyRequestId.middleware;

@@ -1,6 +1,6 @@
 import { v4 as UUIDV4 } from "uuid";
 
-class RestneerXRequestId {
+class RestifyXRequestId {
 
     public static middleware(req, res, next): void {
         // Request
@@ -11,4 +11,4 @@ class RestneerXRequestId {
     }
 }
 
-export default RestneerXRequestId;
+export default RestifyXRequestId;

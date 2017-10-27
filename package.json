@@ -1,5 +1,5 @@
 {
-  "name": "restneer-x-request-id",
+  "name": "restify-x-request-id",
   "version": "1.0.0",
   "description": "A middleware for restneer to handle request id",
   "main": "index.js",
@@ -13,19 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leandrocurioso/restneer-x-request-id.git"
+    "url": "git+https://github.com/leandrocurioso/restify-x-request-id.git"
   },
   "keywords": [
-    "restneer",
-    "restneer-x-request-id",
-    "request-id"
+    "restify",
+    "restify-x-request-id",
+    "request-id",
+    "x-request-id"
   ],
   "author": "Leandro Curioso <leandro.curioso@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leandrocurioso/restneer-x-request-id/issues"
+    "url": "https://github.com/leandrocurioso/restify-x-request-id/issues"
   },
-  "homepage": "https://github.com/leandrocurioso/restneer-x-request-id#readme",
+  "homepage": "https://github.com/leandrocurioso/restify-x-request-id#readme",
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.44",

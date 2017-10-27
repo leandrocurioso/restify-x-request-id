@@ -1,9 +1,9 @@
 import { expect } from "chai";
 import * as sinon from "sinon";
 import { v4 as UUIDV4 } from "uuid";
-import RestneerXRequestId from "../../../src/lib/restneer-x-request-id";
+import RestifyRequestId from "../../../src/lib/restify-x-request-id";
 
-describe("class RestneerXRequestId", ()  => {
+describe("class RestifyRequestId", ()  => {
     const req = {
         headers: {},
         header: key => {
@@ -24,7 +24,7 @@ describe("class RestneerXRequestId", ()  => {
 
     it("checks if contains no X-Request-Id header in request", done => {
         next = sinon.spy();
-        RestneerXRequestId.middleware(req, res, next);
+        RestifyRequestId.middleware(req, res, next);
         expect(res.header("X-Request-Id")).to.not.be.undefined;
         expect(next.called).to.be.true;
         done();
@@ -33,7 +33,7 @@ describe("class RestneerXRequestId", ()  => {
     it("checks if contains X-Request-Id header in request", done => {
         req.headers["X-Request-Id"] = UUIDV4();
         next = sinon.spy();
-        RestneerXRequestId.middleware(req, res, next);
+        RestifyRequestId.middleware(req, res, next);
         expect(req.header("X-Request-Id")).to.be.equal(res.header("X-Request-Id"));
         expect(next.called).to.be.true;
         done();
