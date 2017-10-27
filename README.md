@@ -1,5 +1,9 @@
 # Restneer X-Request-Id
-A middleware for restneer to handle request id in response.
+A middleware for restneer to add request id in response object.
+
+The default behaviour is very simple, the middleware checks if there's an UUID in X-Request-Id in request header, if so just set the same header to response object.
+
+If there's no X-Request-Id in request object then a new UUID is generated and added to the response object, so this way every micro service that is called will keep passing the same ID to keep tracking of the request from the beginning to the end.
 
 ## Usage
 
