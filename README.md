@@ -1,8 +1,8 @@
-# Restneer X-Request-Id
+# Restify X-Request-Id
 ![alt Build](https://travis-ci.org/leandrocurioso/restneer-x-request-id.svg?branch=master)
 
 
-A middleware for restneer to add request id in response object.
+A middleware for restify to add request id in response object.
 
 The default behaviour is very simple, the middleware checks if there's an UUID in X-Request-Id in request header, if so just set the same header to response object.
 
@@ -11,19 +11,19 @@ If there's no X-Request-Id in request object then a new UUID is generated and ad
  ## Usage ES6/Typescript
 
 ```javascript
-import RestneerXRequestId from "restneer-x-request-id";
+import RestifyXRequestId from "restify-x-request-id";
 
 // Set middleware
-server.use(RestneerXRequestId);
+server.use(RestifyXRequestId);
  ```
 
 ## Usage ES5
 
 ```javascript
-var RestneerXRequestId = require("restneer-x-request-id");
+var RestifyXRequestId = require("restify-x-request-id");
 
 // Set middleware
-server.use(RestneerXRequestId);
+server.use(RestifyXRequestId);
  ```
  
 ## Adding the module to the project
@@ -35,7 +35,7 @@ Add this into your **package.json** file.
 ```javascript
 "dependencies": {
   ...
-  "restneer-x-request-id": "leandrocurioso/restneer-x-request-id#master"
+  "restify-x-request-id": "leandrocurioso/restify-x-request-id#master"
 }
  ```
  
@@ -45,7 +45,7 @@ Add this into your **package.json** file.
  You can also install with terminal.
  
  ```
- $ npm install --save git+https://github.com/leandrocurioso/restneer-x-request-id.git
+ $ npm install --save git+https://github.com/leandrocurioso/restify-x-request-id.git
 ```
  
  ## Obtaining the generated request id
