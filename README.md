@@ -1,19 +1,31 @@
 # Restneer X-Request-Id
+![alt Build](https://travis-ci.org/leandrocurioso/restneer-x-request-id.svg?branch=master)
+
+
 A middleware for restneer to add request id in response object.
 
 The default behaviour is very simple, the middleware checks if there's an UUID in X-Request-Id in request header, if so just set the same header to response object.
 
 If there's no X-Request-Id in request object then a new UUID is generated and added to the response object, so this way every micro service that is called will keep passing the same ID to keep tracking of the request from the beginning to the end.
 
-## Usage
+ ## Usage ES6/Typescript
 
 ```javascript
-const RestneerXRequestId = require('restneer-x-request-id');
+import RestneerXRequestId from "restneer-x-request-id";
 
 // Set middleware
 server.use(RestneerXRequestId);
  ```
 
+## Usage ES5
+
+```javascript
+var RestneerXRequestId = require("restneer-x-request-id");
+
+// Set middleware
+server.use(RestneerXRequestId);
+ ```
+ 
 ## Adding the module to the project
 
 Add this into your **package.json** file.
