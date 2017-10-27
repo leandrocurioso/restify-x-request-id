@@ -7,20 +7,38 @@ The default behaviour is very simple, the middleware checks if there's an UUID i
 
 If there's no X-Request-Id in request object then a new UUID is generated and added to the response object, so this way every micro service that is called will keep passing the same ID to keep tracking of the request from the beginning to the end.
 
- ## Install
+## Install
 
 ```console
 npm install --save restify-x-request-id
- ```
- 
- ## Obtaining the generated request id
- 
- Since the X-Request-Id is linked to the response header (res), to access you must write:
- 
- ```javascript
- server.use((req, res, next) => {
-  console.log(res.header("X-Request-Id"));
-  //The output will be something like: f2bf0a3b-5d34-43ad-879b-6eceaa0b089e
-  return next();
- );
-  ```
+```
+
+## Usage ES6/Typescript
+
+```javascript
+import RestfiyXRequestId from "restify-x-request-id";
+...
+server.use(RestfiyXRequestId.middleware);
+...
+```
+
+## Usage ES5
+
+```javascript
+var restfiyXRequestId = require("restify-x-request-id");
+...
+server.use(restfiyXRequestId.middleware);
+...
+```
+
+## Obtaining the generated request id
+
+Since the X-Request-Id is linked to the response header (res), to access you must write:
+
+```javascript
+server.use((req, res, next) => {
+console.log(res.header("X-Request-Id"));
+//The output will be something like: f2bf0a3b-5d34-43ad-879b-6eceaa0b089e
+return next();
+);
+```
