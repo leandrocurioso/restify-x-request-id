@@ -1,0 +1,64 @@
+{
+  "name": "restneer-x-request-id",
+  "version": "1.0.0",
+  "description": "A middleware for restneer to handle request id",
+  "main": "index.js",
+  "scripts": {
+    "watch-ts": "clear && tsc -w -p .",
+    "watch": "clear && nodemon index.js",
+    "test:tslint": "tslint --project tslint.json",
+    "test:unit": "nyc mocha --require ts-node/register ./test/**/*.ts",
+    "test:security": "nsp check",
+    "test": "clear && npm run test:tslint && npm run test:unit && npm run test:security"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrocurioso/restneer-x-request-id.git"
+  },
+  "keywords": [
+    "restneer",
+    "restneer-x-request-id",
+    "request-id"
+  ],
+  "author": "Leandro Curioso <leandro.curioso@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandrocurioso/restneer-x-request-id/issues"
+  },
+  "homepage": "https://github.com/leandrocurioso/restneer-x-request-id#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.47",
+    "@types/sinon": "^2.3.7",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "nsp": "^2.8.1",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.2",
+    "ts-lint": "^4.5.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "tslint-no-unused-expression-chai": "0.0.3",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "uuid": "^3.1.0"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "text-summary"
+    ],
+    "all": true,
+    "sourceMap": true,
+    "instrument": true
+  }
+}
