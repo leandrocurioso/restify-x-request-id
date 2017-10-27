@@ -1,7 +1,7 @@
 {
   "name": "restify-x-request-id",
   "version": "1.0.0",
-  "description": "A middleware for restneer to handle request id",
+  "description": "A middleware for restify to handle request id in micro services.",
   "main": "index.js",
   "scripts": {
     "watch-ts": "clear && tsc -w -p .",
@@ -21,7 +21,7 @@
     "request-id",
     "x-request-id"
   ],
-  "author": "Leandro Curioso <leandro.curioso@gmail.com>",
+  "author": "Leandro Curioso <leandro.curioso@gmail.com> (https://www.linkedin.com/in/leandro-curioso)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/leandrocurioso/restify-x-request-id/issues"
