@@ -7,45 +7,11 @@ The default behaviour is very simple, the middleware checks if there's an UUID i
 
 If there's no X-Request-Id in request object then a new UUID is generated and added to the response object, so this way every micro service that is called will keep passing the same ID to keep tracking of the request from the beginning to the end.
 
- ## Usage ES6/Typescript
+ ## Install
 
-```javascript
-import RestifyXRequestId from "restify-x-request-id";
-
-// Set middleware
-server.use(RestifyXRequestId);
+```console
+npm install --save restify-x-request-id
  ```
-
-## Usage ES5
-
-```javascript
-var RestifyXRequestId = require("restify-x-request-id");
-
-// Set middleware
-server.use(RestifyXRequestId);
- ```
- 
-## Adding the module to the project
-
-Add this into your **package.json** file.
-
-**IMPORTANT: This is not a npm module but will work the same way, you must add manualy because the base code is here in GitHub.**
-
-```javascript
-"dependencies": {
-  ...
-  "restify-x-request-id": "leandrocurioso/restify-x-request-id#master"
-}
- ```
- 
- If you use **npm install** will be installed like a npm module direct to the **node_modules** folder.
- 
- 
- You can also install with terminal.
- 
- ```
- $ npm install --save git+https://github.com/leandrocurioso/restify-x-request-id.git
-```
  
  ## Obtaining the generated request id
  

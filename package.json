@@ -1,6 +1,6 @@
 {
   "name": "restify-x-request-id",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A middleware for restify to handle request id in micro services.",
   "main": "index.js",
   "scripts": {
