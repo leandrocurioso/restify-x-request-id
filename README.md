@@ -1,6 +1,5 @@
 # Restify X-Request-Id
-![alt Build](https://travis-ci.org/leandrocurioso/restneer-x-request-id.svg?branch=master)
-
+![alt Build](https://travis-ci.org/leandrocurioso/restify-x-request-id.svg?branch=master)
 
 A middleware for restify to add request id in response object.
 
