@@ -1,2 +1,1 @@
-const RestifyRequestId = require("./dist/restify-x-request-id");
-module.exports = RestifyRequestId;
+module.exports = require("./dist/restify-x-request-id").default;
