@@ -25,7 +25,7 @@ server.use(RestfiyXRequestId.middleware);
 ## Usage ES5
 
 ```javascript
-var restfiyXRequestId = require("restify-x-request-id");
+var restfiyXRequestId = require("restify-x-request-id").default;
 ...
 server.use(restfiyXRequestId.middleware);
 ...
