@@ -1,1 +1,1 @@
-module.exports = require("./dist/restify-x-request-id").default;
+module.exports = require("./dist/restify-x-request-id");
