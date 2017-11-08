@@ -33,12 +33,12 @@ server.use(restfiyXRequestId.middleware);
 
 ## Obtaining the generated request id
 
-Since the X-Request-Id is linked to the response header (res), to access you must write:
+Since the X-Request-Id is linked to the request object (req.reqId), to access you must write:
 
 ```javascript
 server.use((req, res, next) => {
-console.log(res.header("X-Request-Id"));
-//The output will be something like: f2bf0a3b-5d34-43ad-879b-6eceaa0b089e
-return next();
+    console.log(req.reqId);
+    //The output will be something like: f2bf0a3b-5d34-43ad-879b-6eceaa0b089e
+    return next();
 );
 ```
