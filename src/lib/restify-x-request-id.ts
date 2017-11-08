@@ -4,9 +4,9 @@ class RestifyXRequestId {
 
     public static middleware(req, res, next): void {
         // Request
-        const xRequestId = req.header("X-Request-Id") || UUIDV4();
+        req.reqId = req.reqId || UUIDV4();
         // Response
-        res.header("X-Request-Id", xRequestId);
+        res.header("X-Request-Id", req.reqId);
         return next();
     }
 }

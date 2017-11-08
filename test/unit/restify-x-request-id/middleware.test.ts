@@ -6,9 +6,7 @@ import RestifyRequestId from "../../../src/lib/restify-x-request-id";
 describe("class RestifyRequestId", ()  => {
     const req = {
         headers: {},
-        header: key => {
-         return req.headers[key];
-        }
+        reqId: null
      };
 
     const res = {
@@ -25,16 +23,16 @@ describe("class RestifyRequestId", ()  => {
     it("checks if contains no X-Request-Id header in request", done => {
         next = sinon.spy();
         RestifyRequestId.middleware(req, res, next);
-        expect(res.header("X-Request-Id")).to.not.be.undefined;
+        expect(req.reqId).to.not.be.undefined;
         expect(next.called).to.be.true;
         done();
     });
 
     it("checks if contains X-Request-Id header in request", done => {
-        req.headers["X-Request-Id"] = UUIDV4();
+        req.reqId = UUIDV4();
         next = sinon.spy();
         RestifyRequestId.middleware(req, res, next);
-        expect(req.header("X-Request-Id")).to.be.equal(res.header("X-Request-Id"));
+        expect(req.reqId).to.be.equal(res.header("X-Request-Id"));
         expect(next.called).to.be.true;
         done();
     });

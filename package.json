@@ -1,7 +1,7 @@
 {
   "name": "restify-x-request-id",
-  "version": "1.0.5",
-  "description": "A middleware for restify to handle request id in micro services.",
+  "version": "1.0.6",
+  "description": "A middleware for restify to create request id (req.reqId).",
   "main": "index.js",
   "scripts": {
     "watch-ts": "clear && tsc -w -p .",

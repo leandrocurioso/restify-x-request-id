@@ -6,9 +6,9 @@ var RestifyXRequestId = /** @class */ (function () {
     }
     RestifyXRequestId.middleware = function (req, res, next) {
         // Request
-        var xRequestId = req.header("X-Request-Id") || uuid_1.v4();
+        req.reqId = req.reqId || uuid_1.v4();
         // Response
-        res.header("X-Request-Id", xRequestId);
+        res.header("X-Request-Id", req.reqId);
         return next();
     };
     return RestifyXRequestId;
