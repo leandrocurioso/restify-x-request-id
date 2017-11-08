@@ -1,6 +1,6 @@
 {
   "name": "restify-x-request-id",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A middleware for restify to create request id (req.reqId).",
   "main": "index.js",
   "scripts": {
