@@ -6,7 +6,7 @@
   "scripts": {
     "watch-ts": "clear && tsc -w -p .",
     "watch": "clear && nodemon index.js",
-    "test:tslint": "tslint --project tslint.json",
+    "test:tslint": "tslint --project tsconfig.json",
     "test:unit": "nyc mocha --require ts-node/register ./test/**/*.ts",
     "test:security": "nsp check",
     "test": "clear && npm run test:tslint && npm run test:unit && npm run test:security"
